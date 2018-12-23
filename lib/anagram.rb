@@ -11,7 +11,7 @@ class Anagram
     test_array.each do |testcase|
         test_scanned = testcase.scan(/\w/).sort 
         if test_scanned ==  ana_ary
-            valid_matches << test_scanned
+            valid_matches << test_scanned.join
         end
     end
 
