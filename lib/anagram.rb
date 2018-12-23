@@ -1,10 +1,12 @@
 # Your code goes here!
 class Anagram
-    
-    
-    def match(input1, test_array)
+  attr_accessor :word
+    def initialize(word)
+    @word = word 
+  end
+    def match(test_array)
     valid_matches = []
-    ana_ary = input1.scan(/\w/).sort
+    ana_ary = @word.scan(/\w/).sort
 
     test_array.each do |testcase|
         test_scanned = testcase.scan(/\w/).sort 
